@@ -69,5 +69,46 @@
             </div>
         </div>
     </div>
+
+{# Section Analyse Réflexive #}
+    <div class="mt-5 mb-5">
+        <div class="text-center">
+            <button class="btn btn-primary btn-lg shadow" type="button" data-bs-toggle="collapse" data-bs-target="#reflexion" aria-expanded="false">
+                🔍 Afficher l'Analyse Réflexive
+            </button>
+        </div>
+
+        <div class="collapse mt-4" id="reflexion">
+            <div class="card card-body bg-light border-0 shadow-sm p-4">
+                <h3 class="text-center mb-4">Analyse Réflexive du Projet</h3>
+                
+                <div class="row">
+                    {# 1. Avant l'action #}
+                    <div class="col-md-4">
+                        <h5 class="text-primary border-bottom pb-2">1. Avant l’action</h5>
+                        <p class="small text-muted"><strong>Planification :</strong></p>
+                        <p class="small">L'objectif était de créer un pont entre la cybersécurité (analyse de logs) et le développement web. J'ai dû planifier l'architecture : Python pour la puissance de traitement et Symfony pour la clarté de l'interface. Le choix du CSV comme format pivot a été décidé dès le départ pour assurer l'interopérabilité.</p>
+                    </div>
+
+                    {# 2. Pendant l'action #}
+                    <div class="col-md-4">
+                        <h5 class="text-primary border-bottom pb-2">2. Pendant l’action</h5>
+                        <p class="small text-muted"><strong>Faits et Sentiments :</strong></p>
+                        <p class="small">Lors de l'exécution, j'ai rencontré des difficultés avec la gestion des chemins de fichiers et le formatage des Regex en Python. J'ai ressenti de la satisfaction en voyant le premier tableau s'afficher dynamiquement, mais aussi de la frustration face aux erreurs de "push" Git, ce qui m'a obligé à approfondir ma maîtrise du versionnage.</p>
+                    </div>
+
+                    {# 3. Après l'action #}
+                    <div class="col-md-4">
+                        <h5 class="text-primary border-bottom pb-2">3. Après l’action</h5>
+                        <p class="small text-muted"><strong>Bilan et Futur :</strong></p>
+                        <p class="small"><strong>Bilan :</strong> Les AC sont validés, notamment sur la capacité à modifier un programme (AC0312) et choisir les outils adaptés (AC0315).<br>
+                        <strong>Critique :</strong> Le code pourrait être plus modulaire.<br>
+                        <strong>Futur :</strong> Je souhaite automatiser davantage la capture de paquets en temps réel via une API.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 {% endblock %}
