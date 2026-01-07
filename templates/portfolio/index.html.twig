@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio SAÉ 1.05 - Liste des AC{% endblock %}
+
+{% block body %}
+<div class="container py-5">
+    <div class="row mb-5">
+        <div class="col-lg-10 mx-auto">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bold text-dark">Mon Portfolio de Compétences</h1>
+                <p class="lead text-muted">SAÉ 1.05 : Analyse et Extraction de données</p>
+                <div class="badge bg-primary px-3 py-2">Parcours : Réseaux & Télécoms</div>
+            </div>
+
+            <div class="list-group shadow-sm">
+                {# AC 0311 #}
+                <div class="list-group-item list-group-item-action p-4">
+                    <div class="d-flex w-100 justify-content-between align-items-center">
+                        <h5 class="mb-2 fw-bold text-primary">AC0311 | Utiliser un système informatique et ses outils</h5>
+                        <span class="badge bg-secondary">Environnement</span>
+                    </div>
+                    <p class="mb-1 text-muted">Utilisation quotidienne du terminal (CLI) pour administrer le projet Symfony, exécuter des scripts Python et gérer les dépendances via Composer.</p>
+                </div>
+
+                {# AC 0312 #}
+                <div class="list-group-item list-group-item-action p-4">
+                    <div class="d-flex w-100 justify-content-between align-items-center">
+                        <h5 class="mb-2 fw-bold text-primary">AC0312 | Lire, exécuter, corriger et modifier un programme</h5>
+                        <span class="badge bg-secondary">Programmation</span>
+                    </div>
+                    <p class="mb-1 text-muted">Maintenance du script <code>txt_to_csv.py</code> : ajustement des expressions régulières (Regex) pour capturer correctement les adresses IP et les flags TCP dans le fichier <code>DumpFile.txt</code>.</p>
+                </div>
+
+                {# AC 0313 #}
+                <div class="list-group-item list-group-item-action p-4">
+                    <div class="d-flex w-100 justify-content-between align-items-center">
+                        <h5 class="mb-2 fw-bold text-primary">AC0313 | Traduire un algorithme, dans un langage et pour un environnement donné</h5>
+                        <span class="badge bg-secondary">Algorithmique</span>
+                    </div>
+                    <p class="mb-1 text-muted">Développement de l'algorithme d'analyse dans <code>csv_to_md.py</code> capable de trier 10 000 lignes pour détecter des attaques par déni de service (DoS) et des scans de ports.</p>
+                </div>
+
+                {# AC 0314 #}
+                <div class="list-group-item list-group-item-action p-4">
+                    <div class="d-flex w-100 justify-content-between align-items-center">
+                        <h5 class="mb-2 fw-bold text-primary">AC0314 | Connaître l’architecture et les technologies d’un site Web</h5>
+                        <span class="badge bg-secondary">Web</span>
+                    </div>
+                    <p class="mb-1 text-muted">Mise en place d'une architecture <strong>MVC</strong> (Modèle-Vue-Contrôleur) avec le Framework <strong>Symfony</strong>. Gestion du routage et des templates avec le moteur Twig.</p>
+                </div>
+
+                {# AC 0315 #}
+                <div class="list-group-item list-group-item-action p-4">
+                    <div class="d-flex w-100 justify-content-between align-items-center">
+                        <h5 class="mb-2 fw-bold text-primary">AC0315 | Choisir les mécanismes de gestion de données adaptés</h5>
+                        <span class="badge bg-secondary">Data</span>
+                    </div>
+                    <p class="mb-1 text-muted">Choix d'un stockage au format <strong>CSV</strong> comme interface légère et rapide entre les scripts Python (Analyse) et le site Web (Visualisation), évitant la lourdeur d'une base de données SQL pour ce besoin précis.</p>
+                </div>
+
+                {# AC 0316 #}
+                <div class="list-group-item list-group-item-action p-4">
+                    <div class="d-flex w-100 justify-content-between align-items-center">
+                        <h5 class="mb-2 fw-bold text-primary">AC0316 | S’intégrer dans un environnement de travail collaboratif</h5>
+                        <span class="badge bg-secondary">Méthodologie</span>
+                    </div>
+                    <p class="mb-1 text-muted">Utilisation rigoureuse de <strong>Git et GitHub</strong> pour le versionnage du code, permettant de partager l'avancement du projet avec l'équipe et d'assurer la continuité du développement.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

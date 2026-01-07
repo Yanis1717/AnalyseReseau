@@ -35,4 +35,10 @@ class PageController extends AbstractController
         $this->addFlash('success', 'Analyse terminée ! Le rapport a été mis à jour.');
         return $this->redirectToRoute('app_home');
     }
+
+    #[Route('/portfolio', name: 'app_portfolio')]
+    public function portfolio(): Response
+    {
+        return $this->render('portfolio/index.html.twig');
+    }
 }
