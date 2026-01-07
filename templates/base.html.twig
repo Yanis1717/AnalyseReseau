@@ -1,17 +1,44 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Mon Portfolio{% endblock %}</title>
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
+    <!-- Bootswatch Lux -->
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/lux/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+    .fond {
+    /* Un dégradé subtil du bleu clair vers le gris */
+    background: linear-gradient(0deg, #7e355fff 0%, #d680a1ff 100%); /* Couleur de fond dégradée */
+    
+    /* Fixe le fond pour qu'il ne bouge pas quand on scrolle */
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    }
+
+    </style>
+
+</head>
+<body class="fond">
+<div class="wrapper d-flex flex-column min-vh-100">
+
+   
+
+
+
+    <div class="content container flex-grow-1 my-5">
         {% block body %}{% endblock %}
-    </body>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
 </html>
