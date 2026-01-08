@@ -39,55 +39,137 @@
                     <span class="badge bg-primary me-2">
                         1
                     </span> 
+                        <p class="small">
+                            {{ current_locale == 'fr' 
+                                ? 'Phase 1 : Structuration des données' 
+                                : 'Phase 1: Data Structuring' 
+                            }}
+                        </p>
+                </h3>
+                <div class="p-3 border rounded bg-white">
                     <p class="small">
                         {{ current_locale == 'fr' 
-                            ? 'Phase 1 : Structuration des données' 
-                            : 'Phase 1: Data Structuring' 
+                            ? 'Mettez DumpFile.txt et txt_to_csv.py dans le même dossier' 
+                            : 'Place both DumpFile.txt and txt_to_csv.py in the same folder.' 
                         }}
                     </p>
-                </h3>
-                <div class="card border-0 shadow-sm bg-light p-4">
-                    <p>{{ content.phase1_desc }}</p>
-                    <ul class="mb-0">
-                        <li><strong>Setup:</strong> DumpFile.txt & txt_to_csv.py</li>
-                        <li><strong>Run:</strong> <code>python txt_to_csv.py</code></li>
-                    </ul>
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'Exécutez le script pyhton txt_to_csv.py.' 
+                            : 'Run the script using python txt_to_csv.py.' 
+                        }}
+                    </p>
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'Le script découpe le texte et génère Network_Analysis.csv.' 
+                            : 'The script parses the text and generates Network_Analysis.csv.' 
+                        }}
+                    </p>
                 </div>
+
                 <img src="{{ asset('images/Image1.png') }}" alt="1">
             </section>
 
             {# Phase 2 (Excel) #}
             <section class="mb-5">
                 <h3 class="h4 text-dark mb-3">
-                    <span class="badge bg-primary me-2">2</span> 
-                    {{ current_locale == 'fr' ? 'Phase 2 : Analyse Excel' : 'Phase 2: Excel Analysis' }}
+                    <span class="badge bg-primary me-2">
+                        2
+                    </span> 
+                        {{ current_locale == 'fr'
+                            ? 'Phase 2 : Analyse Excel' 
+                            : 'Phase 2: Excel Analysis' 
+                        }}
                 </h3>
-                <div class="row g-3">
-                    <div class="col-md-12">
-                        <div class="p-3 border rounded bg-white">
-                            <p class="small">
-                                {{ current_locale == 'fr' 
-                                    ? 'Importez le CSV dans Excel (Séparateur ;) et créez un Tableau Croisé Dynamique.' 
-                                    : 'Import CSV into Excel (Delimiter ;) and create a Pivot Table.' 
-                                }}
-                            </p>
-                            <ul class="small mb-0">
-                                
-                                <p class="small">
-                                    {{ current_locale == 'fr' 
-                                        ? 'FRANCAIS' 
-                                        : 'ANGLAIS Rows: Source Filters: Destination' 
-                                    }}
-                                </p>
+                <div class="p-3 border rounded bg-white">
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'Une fois le fichier CSV obtenu, vous pouvez effectuer 
+                            une analyse approfondie des données à l\'aide de Microsoft Excel 
+                            afin de visualiser les schémas d\'attaque.' 
+                            : 'Once you have the CSV file, you can perform a deep dive into 
+                            the data using Microsoft Excel to visualize the attack patterns.' 
+                        }}
+                    </p>
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'Ouvrez Excel et importez le fichier Network_Analysis.csv (Données
+                             > À partir d\'un fichier texte/CSV). Assurez-vous que le 
+                             séparateur est bien réglé sur Point-virgule ;.' 
+                            : 'Open Excel and import Network_Analysis.csv (Data > From Text/CSV). 
+                            Ensure the delimiter is set to Semicolon ;.' 
+                        }}
+                    </p>
 
-
-                            
-                            </ul>
-                        </div>
-                    </div>
                 </div>
-                <img src="{{ asset('images/Image2.png') }}" alt="2">
-                <img src="{{ asset('images/Image3.png') }}" alt="3">
+                    <img src="{{ asset('images/Image2.png') }}" alt="2">
+                    <img src="{{ asset('images/Image3.png') }}" alt="3">
+                <div class="p-3 border rounded bg-white">
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'Cliquez sur n\'importe quelle cellule de vos données et appuyez 
+                            sur Ctrl+A pour sélectionner l\'ensemble du tableau.' 
+                            : 'Click any cell in your data and press Ctrl+A to select the entire table.' 
+                        }}
+                    </p>
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'Allez dans l\'onglet Insertion et cliquez sur Tableau croisé dynamique. 
+                            Cliquez sur OK pour le créer dans une nouvelle feuille de calcul.' 
+                            : 'Go to the Insert tab and click on PivotTable. Click OK to create 
+                            it in a new worksheet. ' 
+                        }}
+                    </p>
+                </div>
+                    <img src="{{ asset('images/Image4.png') }}" alt="4">
+                    <img src="{{ asset('images/Image5.png') }}" alt="5">
+                <div class="p-3 border rounded bg-white">
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'Faites glisser le champ Source dans la zone Lignes.' 
+                            : 'Drag Source into the Rows area.' 
+                        }}
+                    </p>
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'Faites glisser à nouveau le champ Source dans la zone Valeurs 
+                            (cela devrait afficher "Nombre de Source").' 
+                            : 'Drag Source again into the Values area (it should show "Count of Source").' 
+                        }}
+                    </p>
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'Faites glisser le champ Destination dans la zone Filtres.' 
+                            : 'Drag Destination into the Filters area' 
+                        }}
+                    </p>
+                </div>
+                    <img src="{{ asset('images/Image6.png') }}" alt="6">
+                <div class="p-3 border rounded bg-white">
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'FR1' 
+                            : 'EN1' 
+                        }}
+                    </p>
+                </div>
+                    <img src="{{ asset('images/Image6.png') }}" alt="6">
+                <div class="p-3 border rounded bg-white">
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'FR2' 
+                            : 'EN2' 
+                        }}
+                    </p>
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'FR3' 
+                            : 'EN3' 
+                        }}
+                    </p>
+                </div>
+
+
             </section>
 
             {# Phase 3 (Automated) #}
