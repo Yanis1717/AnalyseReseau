@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ content.title }}{% endblock %}
+
+{% block body %}
+<div class="container py-5">
+    {# Bouton de changement de langue dynamique #}
+    <div class="d-flex justify-content-end mb-4">
+        <a href="{{ path('app_procedure', {'_locale': content.target_locale}) }}" class="btn btn-dark">
+            🌐 {{ content.btn_switch }}
+        </a>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            
+            {# En-tête #}
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bold text-primary">
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'Guide : Analyse du Trafic Réseau' 
+                            : 'Guide : Network Traffic Analysis' 
+                        }}
+                    </p>
+                </h1>
+                <p class="lead text-muted">
+                    {{ current_locale == 'fr' 
+                        ? 'Instructions sur l\'utilisation de nos outils Python pour traiter les captures réseau.' 
+                        : 'Instructions on how to use our Python toolset to process raw network captures.' 
+                    }}
+                </p>
+                <hr class="w-25 mx-auto">
+            </div>
+
+            {# Phase 1 (Utilise tes variables du Controller) #}
+            <section class="mb-5">
+                <h3 class="h4 text-dark mb-3">
+                    <span class="badge bg-primary me-2">
+                        1
+                    </span> 
+                    <p class="small">
+                        {{ current_locale == 'fr' 
+                            ? 'Phase 1 : Structuration des données' 
+                            : 'Phase 1: Data Structuring' 
+                        }}
+                    </p>
+                </h3>
+                <div class="card border-0 shadow-sm bg-light p-4">
+                    <p>{{ content.phase1_desc }}</p>
+                    <ul class="mb-0">
+                        <li><strong>Setup:</strong> DumpFile.txt & txt_to_csv.py</li>
+                        <li><strong>Run:</strong> <code>python txt_to_csv.py</code></li>
+                    </ul>
+                </div>
+                <img src="{{ asset('images/Image1.png') }}" alt="1">
+            </section>
+
+            {# Phase 2 (Excel) #}
+            <section class="mb-5">
+                <h3 class="h4 text-dark mb-3">
+                    <span class="badge bg-primary me-2">2</span> 
+                    {{ current_locale == 'fr' ? 'Phase 2 : Analyse Excel' : 'Phase 2: Excel Analysis' }}
+                </h3>
+                <div class="row g-3">
+                    <div class="col-md-12">
+                        <div class="p-3 border rounded bg-white">
+                            <p class="small">
+                                {{ current_locale == 'fr' 
+                                    ? 'Importez le CSV dans Excel (Séparateur ;) et créez un Tableau Croisé Dynamique.' 
+                                    : 'Import CSV into Excel (Delimiter ;) and create a Pivot Table.' 
+                                }}
+                            </p>
+                            <ul class="small mb-0">
+                                
+                                <p class="small">
+                                    {{ current_locale == 'fr' 
+                                        ? 'FRANCAIS' 
+                                        : 'ANGLAIS Rows: Source Filters: Destination' 
+                                    }}
+                                </p>
+
+
+                            
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <img src="{{ asset('images/Image2.png') }}" alt="2">
+                <img src="{{ asset('images/Image3.png') }}" alt="3">
+            </section>
+
+            {# Phase 3 (Automated) #}
+            <section class="mb-5">
+                <h3 class="h4 text-dark mb-3">
+                    <span class="badge bg-primary me-2">3</span> 
+                    {{ current_locale == 'fr' ? 'Phase 3 : Rapport Automatisé' : 'Phase 3: Automated Reporting' }}
+                </h3>
+                <div class="card border-start border-primary border-4 shadow-sm p-4">
+                    <p><code>python csv_to_md.py</code></p>
+                    <p class="small text-muted mb-0">
+                        {{ current_locale == 'fr' 
+                            ? 'Le script génère un rapport Markdown professionnel interprétant les flags TCP.' 
+                            : 'The script generates a professional Markdown report interpreting TCP flags.' 
+                        }}
+                    </p>
+                </div>
+            </section>
+
+            <div class="text-center mt-5">
+                <a href="{{ path('app_home') }}" class="btn btn-outline-secondary">
+                    {{ current_locale == 'fr' ? 'Retour' : 'Back' }}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
